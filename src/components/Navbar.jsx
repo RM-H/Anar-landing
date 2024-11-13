@@ -1,61 +1,19 @@
-import {Search, Menu} from '@mui/icons-material'
+
 import {Link} from 'react-router-dom'
-import {useState} from 'react'
+
 import {
-    Box, Divider, Drawer,
-    IconButton,
-    List,
-    ListItem,
-    ListItemButton,
-    ListItemIcon,
-    ListItemText,
-    MenuItem,
-    Typography
+     Button,
+
 } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
+
 
 const Navbar = () => {
-    const [show, setshow] = useState(false)
-    const [open, setOpen] = useState(false);
 
-    const toggleDrawer = (newOpen) => () => {
-        setOpen(newOpen);
-    };
+    const scrollto = () => {
+     document.getElementById('dl').scrollIntoView({behavior:'smooth' , block:'end'})
+    }
 
-    const DrawerList = (
-        <Box sx={{ width: '12rem' }} role="presentation" onClick={toggleDrawer(false)}>
-            <List>
-                <Link to='/' className="navbar-item  ">
-                    خانه
-                </Link>
 
-                <Link to='/projects/' className="navbar-item ">
-                    پروژه‌ها
-                </Link>
-
-                <Link to='/invoice/' className="navbar-item ">
-                    برآورد هزینه
-                </Link>
-
-                <Link to='/blogs/' className="navbar-item ">
-                    وبلاگ
-                </Link>
-
-                <Link to='/masters/' className="navbar-item ">
-                    استدادکاران
-                </Link>
-
-                <Link to='/about/' className="navbar-item ">
-                    درباره ما
-                </Link>
-
-                <Link to='/contact/' className="navbar-item ">
-                    تماس با ما
-                </Link>
-            </List>
-
-        </Box>
-    );
 
 
 
@@ -64,70 +22,65 @@ const Navbar = () => {
             <header>
 
 
-                <nav className="navbar" role="navigation" aria-label="main navigation">
-
-
-                    <Drawer anchor='right'  open={open} onClose={toggleDrawer(false)}>
-                        {DrawerList}
-                    </Drawer>
+                <nav className="navbar " role="navigation" aria-label="main navigation" >
 
 
 
-                    <div className='columns w100  m-0'>
-                        <div className='column  is-2  '>
-
-                            <div className={`dropdown  is-hidden-desktop w100 is-flex is-align-items-center is-justify-content-space-between `}>
-                                <div className="dropdown-trigger    ">
-                                    <button onClick={toggleDrawer(true)} className="button bgclrthree has-text-white "
-                                            aria-haspopup="true" aria-controls="dropdown-menu2">
-                                        <Menu/>
 
 
-                                    </button>
 
+                    <div className='columns is-flex w100  m-0 mx-auto  container  is-justify-content-space-between'>
+                        <div className='column  is-2-desktop is-12-mobile   '>
 
-                                </div>
+                            <div className={`dropdown  is-hidden-desktop w100  is-flex is-align-items-center is-justify-content-center has-text-centered`}>
+
                                 <Link to='/' >
 
-                                    <img src="/asset/images/logo-white.webp" className='logo  ' alt="logo"/>
+                                    <img src="/asset/images/logo-red.webp" className='logo-mobile  ' alt="logo"/>
                                 </Link>
 
                             </div>
 
 
+
                             <Link to='/' className='is-hidden-mobile '>
 
-                                <img src="/asset/images/logo-white.webp" className='logo  ' alt="logo"/>
+                                <img src="/asset/images/logo-red.webp" className='logo  ' alt="logo"/>
                             </Link>
 
 
                         </div>
 
                         <div
-                            className='column is-hidden-mobile is-12-mobile is-8 is-flex-desktop is-align-items-center  '>
+                            className='column is-hidden-mobile is-12-mobile is-12-desktop is-flex-desktop is-align-items-center  '>
 
                             <div id="navbarBasicExample" className="navbar-menu  ">
-                                <div className="navbar-start mx-auto is">
+                                <div className="navbar-start ">
 
-                                    <Link to='/' className="navbar-item textclrone ">
+                                    <Link to='/' className="navbar-item has-text-black   ">
                                         خانه
                                     </Link>
 
 
 
-                                    <Link to='/about/' className="navbar-item textclrone">
-                                        درباره ما
+                                    <Link to='/about/' className="navbar-item  has-text-black">
+                                        درباره
+                                        <strong className='clronetext'>
+                                            انار
+                                        </strong>
+
+                                        مارکت
                                     </Link>
 
-                                    <Link to='/contact/' className="navbar-item textclrone">
-                                        تماس با ما
-                                    </Link>
+
 
 
                                 </div>
                             </div>
 
                         </div>
+
+
 
 
 

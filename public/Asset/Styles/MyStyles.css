@@ -4,14 +4,20 @@
 /*------------*/
 
 @font-face {
-    src: url("/Asset/fonts/YekanBakhFaNum-Regular.ttf");
-    font-family: Yekan;
+    src: url("/asset/fonts/Anjoman-Medium.woff2");
+    font-family: Anjoman;
 }
+
+
 :root{
-    --clrone:#BE3144;
+    --clrone:#ff0000;
     --clrtwo:#22092C;
-    --clrThree:#EEF5FF;
-    --clrfour:#EEEEEE;
+    --clrThree:#f2f2f2;
+    --clrfour:#ffe6e6;
+    --clrfive:#b20000;
+    --clrsix: rgb(32, 111, 39);
+
+    --clrseven : hsl(60deg 100% 50%)
 
 
 
@@ -29,14 +35,86 @@
 }
 /* Define the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-    background-color: var(--clrone); /* Background color of the scrollbar thumb */
+    background-color: var(--clrfive); /* Background color of the scrollbar thumb */
     border-radius: 0.3rem; /* Border radius of the scrollbar thumb */
 }
 
 body * {
-    font-family: Yekan, Arial, Calibri, serif;
+    font-family: Anjoman;
+
+}
+
+
+.anjoman {
+    font-family: Anjoman;
+}
+
+
+
+
+/*------------*/
+/*    typography      */
+/*------------*/
+
+.clronetext {
+    color: var(--clrone);
+}
+.clronebg {
+    background-color: var(--clrone);
+    color: var(--clrfour);
+}
+.clrtwobg {
+    background-color: var(--clrtwo);
+    color: var(--clrfour);
+}
+
+.clrfourbg {
     background-color: var(--clrfour);
 }
+
+.clrfivebg {
+    background-color: var(--clrfive) !important;
+    color: var(--clrfour);
+}
+.clrfivetext {
+    color: var(--clrfive);
+}
+
+.clrsixbg {
+    background-color: var(--clrsix);
+}
+.clrsixtext {
+    color: var(--clrsix);
+}
+
+.clrseventext {
+    color: var(--clrseven);
+
+
+}
+.clrssevenbg {
+    background-color: var(--clrseven);
+}
+
+
+/*------------*/
+/*    font sizes      */
+/*------------*/
+
+.fs1 {
+    font-size: 0.6rem;
+}
+.fs2 {
+    font-size: 0.9rem;
+}
+.fs3 {
+    font-size: 1rem;
+}
+.fs4 {
+    font-size: 1.2rem;
+}
+
+
 
 
 
@@ -44,8 +122,14 @@ body * {
 /*    misc      */
 /*------------*/
 
+.mapcontainer {
+    width: 100%;
+    height: 30rem;
+
+}
+
 .blank {
-    height: 6rem;
+    height: 8rem;
 }
 
 .h100 {
@@ -63,16 +147,422 @@ body * {
     width: 100%;
 }
 
+
+.dvhcontainer {
+    display: flex;
+    flex-direction: column;
+    min-height:100dvh ;
+
+}
+.dvhcontainer--66 {
+    min-height: 66dvh;
+}
+
+.dvhcontainer--88 {
+    min-height: 88dvh;
+}
+
+.dvhcontainer--redbg {
+    background-image: url("/asset/images/RED.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.dvhcontainer--pinkbg {
+    background-image: url("/asset/images/PINK.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.borderclrsix {
+    border:1px solid var(--clrsix);
+}
+
+.borderradone {
+    border-radius: 5rem !important;
+}
+
+.borderradtwo {
+    border-radius: 1rem !important;
+}
+
+.borderblack {
+    border: 0.1rem solid var(--clrtwo);
+}
+
+.bordertopblack {
+    border-top: 0.1rem solid var(--clrtwo);
+}
+
+
+
+
+
+.shadowone {
+    box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12);
+}
+
+/*------------*/
+/*    home      */
+/*------------*/
+.home-topbox-container {
+    height: 36rem;
+    border-radius: 9rem;
+    border: 0.2rem solid var(--clrThree);
+    background-color: var(--clrfive);
+    background-image: url("/asset/images/RED.webp");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+    .button {
+        background-color: rgba(84, 84, 84, 0.76);
+        color: var(--clrThree);
+        border-radius: 6rem;
+        border: 1px solid white;
+
+        svg {
+            background-color: var(--clrseven);
+            color: #22092C;
+            border-radius: 50%;
+        }
+    }
+
+}
+
+.download-logos {
+    width: 16rem;
+}
+
+
+
+
+.category-card {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.9rem;
+}
+
+.imagebanner {
+    transform: translateY(-5rem);
+}
+
+
+
+
+
+.downloadbutton {
+    width: 10rem;
+}
+
+.homephone {
+    transform: translateY(-10rem);
+}
+
+.downloadcard {
+    border: 0.3rem solid var(--clrtwo);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    max-width: 15rem;
+    min-height: 23rem;
+
+
+
+}
+.downloadcardinnertop {
+    position: absolute;
+    background-color: var(--clrtwo);
+    color: #EEEEEE;
+    top:0;
+    left:0;
+    width:100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+
+}
+.downloadcardinnerbot {
+    position: absolute;
+    background-color: var(--clrtwo);
+    color: #EEEEEE;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:0.9rem;
+
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+
+}
+
+
+
 /*------------*/
 /*    navbar      */
 /*------------*/
 
 .navbar {
-    position: fixed;
+    position: fixed !important;
     width: 100%;
-    background-color: rgba(255, 0, 0, 0.71) !important;
-    backdrop-filter: blur(0.3rem);
+
+    z-index: 2000 !important;
+
+
+
 
 
 }
+
+
+
+
+
+/*------------*/
+/*    animation */
+/*------------*/
+
+
+
+.borderanimation::before,
+.borderanimation::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0.1rem solid var(--clrone);  /* Border size and color */
+
+    border-radius: 1rem;
+    transition: width 0.6s ease, height 0.3s ease; /* Smooth transition */
+}
+
+.borderanimation::before {
+    top: 0;
+    right: 0;
+    border-left: none; /* Only show top and right borders */
+    border-bottom: none;
+}
+
+.borderanimation::after {
+    bottom: 0;
+    left: 0;
+    border-right: none; /* Only show bottom and left borders */
+    border-top: none;
+}
+
+.borderanimation:hover::before {
+    width: 50%;  /* Expand to half the width */
+    height: 100%; /* Expand to half the height */
+}
+
+.borderanimation:hover::after {
+    width: 50%;  /* Expand to half the width */
+    height: 100%; /* Expand to half the height */
+}
+.borderanimation:hover img {
+    animation: updown  1s  ease-in-out ;
+}
+
+
+.logo {
+    max-width:6rem;
+
+    scale: 1 ;
+    transition:0.3s ease-in;
+}
+
+.logo-mobile {
+    max-width: 6rem;
+}
+
+.logo:hover {
+    scale: 120%;
+    transition: 0.3s ease-in;
+}
+.navbar-item {
+    font-size: 1rem;
+
+
+    color: var(--clrThree) !important;
+
+
+    &::after {
+        content: "";
+        border: solid 0.1618rem var(--clrone);
+
+
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.5s;
+    }
+
+    &:hover {
+        &::after {
+            transform-origin: center;
+            transform: scaleX(1);
+        }
+    }
+
+    @keyframes underline {
+        from {
+            transform: scaleX(0);
+        }
+        to {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.imgwobble:hover {
+    animation: wobble 0.6s ease-in-out;
+}
+.imgwobble{
+    animation: updown2 5s ease-in-out infinite;
+}
+.applicationfeautrescard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clrThree);
+
+
+}
+
+
+@keyframes wobble {
+    0% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(5deg);
+    }
+    30% {
+        transform: rotate(-5deg);
+    }
+    45% {
+        transform: rotate(3deg);
+    }
+    60% {
+        transform: rotate(-3deg);
+    }
+    75% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes updown {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at original position */
+    }
+    25% {
+        transform: translateY(-5px); /* Move up slightly */
+    }
+    50% {
+        transform: translateY(5px); /* Move down slightly */
+    }
+    75% {
+        transform: translateY(-5px); /* Move up again */
+    }
+}
+
+
+@keyframes updown2 {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at original position */
+    }
+    25% {
+        transform: translateY(-1rem); /* Move up slightly */
+    }
+    50% {
+        transform: translateY(1rem); /* Move down slightly */
+    }
+    75% {
+        transform: translateY(-1rem); /* Move up again */
+    }
+}
+
+
+/*------------*/
+/*    slider      */
+/*------------*/
+
+.slidercontainer {
+    width: 100%;
+    height:21rem;
+
+
+
+
+
+
+
+}
+
+
+.sliderinner {
+    display: flex !important;
+
+
+    align-items: center;
+    justify-content: space-between;
+
+
+    height: 7rem;
+    width: 100%;
+}
+
+
+
+/*------------*/
+/*    responsive      */
+/*------------*/
+
+@media screen and (max-width: 440px) {
+    .mobileimg{
+        width: 10rem;
+
+    }
+    .home-topbox-container {
+        height: 90%;
+
+        border-radius: 6rem;
+
+
+    }
+    .category-card {
+        flex-direction: column;
+        p {
+            text-align: center;
+        }
+    }
+
+    .imagebanner {
+        transform: none;
+    }
+
+
+
+
+}
+
 
